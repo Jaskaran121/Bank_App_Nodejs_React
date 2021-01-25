@@ -71,7 +71,7 @@ const AccountActions = ({account,handleChange,values}) => {
                  isActionTypeTransfer() && 
                  <FormControl id="transferTo" isRequired isInvalid = {!(destinationAccountNumber)}>
                     <HStack>
-                        <FormLabel w = "200px">Currency Type:</FormLabel>
+                        <FormLabel w = "200px">Transfer to Account:</FormLabel>
                         <NumberInput 
                             min={0} 
                             keepWithinRange={true} 
