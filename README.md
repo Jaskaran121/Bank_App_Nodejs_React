@@ -1,6 +1,15 @@
 # A Bank Application with the following stacks:-
 1. Frontend Stack- React,ChakraUI,Enzyme,Jest,Axios
 2. Backend Stack - Node, Express,Jest,Supertest.
+<br/>
+You need to the following test users to access the functionality of this application.<br/>
+<br/>
+Test Users of this bank are as follows:-<br/>
+1. Stewie Griffin(stewie_griffin@gmail.com)<br/>
+2. Glenn Quagmire(glenn_quagmire@gmail.com)<br/>
+3. Joe Swanson(joe_swanson@gmail.com)<br/>
+4. Peter Griffin(peter_griffin@gmail.com)<br/>
+5. Lois Griffin(lois_griffin@gmail.com)<br/>
 
 Follwing are the test scenarios that can be used to test application:-<br/>
 <b>Case 1</b>: Customer: Stewie Griffin Customer ID: 777 Account Number: 1234 Initial Balance for account
