@@ -32,25 +32,25 @@ export const performDeposit = (payload: PerformActionPayload,accountData = mockA
     accountData[customerAccount.accountNumber].balance = account.balance + exchangedAmount;
 } 
 
-export const performTransfer = (payload: PerformActionPayload) => {
+export const performTransfer = (payload: PerformActionPayload,accountData = mockAccountData) => {
     const {customerAccount,currencyType,amount,destinationAccountNumber} = payload;
-    const mainAccount = mockAccountData[customerAccount.accountNumber];
-    const destinationAccount = destinationAccountNumber && mockAccountData[destinationAccountNumber];
+    const mainAccount = accountData[customerAccount.accountNumber];
+    const destinationAccount = destinationAccountNumber && accountData[destinationAccountNumber];
     if(!destinationAccount)
         throw new Error("The account in which you want to transfer money is not valid");
     const exchangedAmount = exchangeCurrency(currencyType,amount);
     if(mainAccount.balance - exchangedAmount >=0 && destinationAccountNumber){
-        mockAccountData[customerAccount.accountNumber].balance = mainAccount.balance - exchangedAmount;
-        mockAccountData[destinationAccountNumber].balance = destinationAccount.balance + exchangedAmount;
+        accountData[customerAccount.accountNumber].balance = mainAccount.balance - exchangedAmount;
+        accountData[destinationAccountNumber].balance = destinationAccount.balance + exchangedAmount;
     }  
 }
 
-export const performWithDraw = (payload: PerformActionPayload) => {
+export const performWithDraw = (payload: PerformActionPayload,accountData = mockAccountData) => {
     const {customerAccount,currencyType,amount} = payload;
-    const account = mockAccountData[customerAccount.accountNumber];
+    const account = accountData[customerAccount.accountNumber];
     const exchangedAmount = exchangeCurrency(currencyType,amount);
     if(account.balance - exchangedAmount >=0)
-        mockAccountData[customerAccount.accountNumber].balance = account.balance - exchangedAmount;
+        accountData[customerAccount.accountNumber].balance = account.balance - exchangedAmount;
     else
         throw new Error("Not enough balance to make this withdraw");
 }
