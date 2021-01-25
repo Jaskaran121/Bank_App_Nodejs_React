@@ -5,7 +5,7 @@
 Follwing are the test scenarios that can be used to test application:-<br/>
 <b>Case 1</b>: Customer: Stewie Griffin Customer ID: 777 Account Number: 1234 Initial Balance for account
 number 1234: $100.00 CAD <br/>
-Stewie Griffin deposits $300.00 USD to account number 1234.
+Stewie Griffin deposits $300.00 USD to account number 1234.<br/>
 <b>Case 2</b>: Customer: Glenn Quagmire Customer ID: 504 Account Number: 2001 Initial balance for
 account number 2001: $35,000.00 CAD
 Glenn Quagmire withdraws $5,000.00 MXN from account number 2001. Glenn Quagmire withdraws
